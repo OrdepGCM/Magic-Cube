@@ -1,0 +1,43 @@
+
+* {
+  transition: all ease 2000ms;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.cube, .cb {
+  display: flex;
+  width: auto;
+  overflow: hidden;
+}
+.cube div {
+  background: #009;
+}
+.cb div {
+  background: #060;
+}
+.visible div {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #000;
+  border-left: none;
+}
+div .p2 {
+  border-left: 5px solid #000;
+}
+.rotate div {
+  width: 0;
+  height: 50px;
+  border: 0 solid #000;
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+}
+
+
+
+
+
+
