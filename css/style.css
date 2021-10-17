@@ -1,43 +1,88 @@
 
 * {
+  margin: 0;
+  width: auto;
+  height: auto;
   transition: all ease 2000ms;
 }
 body {
+  padding: 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 200px;
 }
-.cube, .cb {
+.cube {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+.lines {
   display: flex;
   width: auto;
-  overflow: hidden;
+  height: auto;
 }
-.cube div {
-  background: #009;
+.up .squares {
+  background: #ccc;
 }
-.cb div {
+.left .squares {
   background: #060;
 }
-.visible div {
+.front .squares {
+  background: #800;
+}
+.rigth .squares {
+  background: #009;
+}
+.back .squares {
+  background: #BB6C21;
+}
+.down .squares {
+  background: #D3B018;
+}
+.squares {
   width: 50px;
   height: 50px;
   border: 5px solid #000;
-  border-left: none;
+  transition: all ease 2000ms;
 }
-div .p2 {
-  border-left: 5px solid #000;
-}
-.rotate div {
+.hiddenH {
   width: 0;
   height: 50px;
   border: 0 solid #000;
   border-top: 5px solid #000;
   border-bottom: 5px solid #000;
+  transition: all ease 2000ms;
 }
+.hiddenV {
+  width: 50px;
+  height: 0;
+  border: 0 solid #000;
+  border-left: 5px solid #000;
+  border-right: 5px solid #000;
+  transition: all ease 2000ms;
+}
+.navigation td, button {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: auto;
+  overflow: hidden;
+}
+.navigation .miniCube {
+  border: 2px solid #000;
+  background: #ccc;
+}/*
+.cube div:not(.cube div div) {
+  transform: rotateX(45deg) rotateY(-45deg);
+}*/
 
 
 
 
 
 
+
+
+
+g
