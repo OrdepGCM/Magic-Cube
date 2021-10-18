@@ -77,53 +77,93 @@ let Down = {
   square9: down.querySelector(".square9"),
 }
 
-function ElementsObjects(object, clToggle = "", squareMin = 1, squareMax = 9) {
-  if (squareMin == 1)
-    object.square1.classList.toggle(clToggle)
-  if (squareMin <= 2 && squareMax >= 2)
-    object.square2.classList.toggle(clToggle)
-  if (squareMin <= 3 && squareMax >= 3)
-    object.square3.classList.toggle(clToggle)
-  if (squareMin <= 4 && squareMax >= 4)
-    object.square4.classList.toggle(clToggle)
-  if (squareMin <= 5 && squareMax >= 5)
-    object.square5.classList.toggle(clToggle)
-  if (squareMin <= 6 && squareMax >= 6)
-    object.square6.classList.toggle(clToggle)
-  if (squareMin <= 7 && squareMax >= 7)
-    object.square7.classList.toggle(clToggle)
-  if (squareMin <= 8 && squareMax >= 8)
-    object.square8.classList.toggle(clToggle)
-  if (squareMin <= 9 && squareMax >= 9)
-    object.square9.classList.toggle(clToggle)
+function ElementsObjects(object, action, actionArg = "", squareMin = 1, squareMax = 9) {
+  if (squareMin == 1){
+    if(action == "classList.toggle")
+    object.square1.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square1.style.transform = actionArg
+  }
+  if (squareMin <= 2 && squareMax >= 2){
+    if(action == "classList.toggle")
+    object.square2.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square2.style.transform = actionArg
+  }
+  if (squareMin <= 3 && squareMax >= 3){
+    if(action == "classList.toggle")
+    object.square3.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square3.style.transform = actionArg
+  }
+  if (squareMin <= 4 && squareMax >= 4){
+    if(action == "classList.toggle")
+    object.square4.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square4.style.transform = actionArg
+  }
+  if (squareMin <= 5 && squareMax >= 5){
+    if(action == "classList.toggle")
+    object.square5.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square5.style.transform = actionArg
+  }
+  if (squareMin <= 6 && squareMax >= 6){
+    if(action == "classList.toggle")
+    object.square6.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square6.style.transform = actionArg
+  }
+  if (squareMin <= 7 && squareMax >= 7){
+    if(action == "classList.toggle")
+    object.square7.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square7.style.transform = actionArg
+  }
+  if (squareMin <= 8 && squareMax >= 8){
+    if(action == "classList.toggle")
+    object.square8.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square8.style.transform = actionArg
+  }
+  if (squareMin <= 9 && squareMax >= 9){
+    if(action == "classList.toggle")
+    object.square9.classList.toggle(actionArg)
+    else if(action == "transform")
+    object.square9.style.transform = actionArg
+  }
   return ""
 }
-ElementsObjects(Up, "hiddenV")
-ElementsObjects(Left, "hiddenH")
-ElementsObjects(Rigth, "hiddenH")
-ElementsObjects(Down, "hiddenV")
+ElementsObjects(Up,"classList.toggle", "hiddenV")
+ElementsObjects(Left,"classList.toggle", "hiddenH")
+ElementsObjects(Rigth,"classList.toggle", "hiddenH")
+ElementsObjects(Down,"classList.toggle", "hiddenV")
 
 buttonU.onclick = () => {
   if (!buttonU_.disabled) {
-    ElementsObjects(Rigth, "hiddenH", 1, 3)
-    ElementsObjects(Front, "hiddenH", 1, 3)
+    ElementsObjects(Rigth,"classList.toggle", "hiddenH", 1, 3)
+    ElementsObjects(Rigth,"transform","translateX(-180px)", 1,3)
+    ElementsObjects(Front,"classList.toggle", "hiddenH", 1, 3)
     buttonU.disabled = true
   }
   else {
-    ElementsObjects(Left, "hiddenH", 1, 3)
-    ElementsObjects(Front, "hiddenH", 1, 3)
+    ElementsObjects(Left,"classList.toggle", "hiddenH", 1, 3)
+    ElementsObjects(Left,"transform","translateX(0px)", 1,3)
+    ElementsObjects(Front,"classList.toggle", "hiddenH", 1, 3)
     buttonU_.disabled = false
   }
 }
 buttonU_.onclick = () => {
   if (!buttonU.disabled) {
-    ElementsObjects(Left, "hiddenH", 1, 3)
-    ElementsObjects(Front, "hiddenH", 1, 3)
+    ElementsObjects(Left,"classList.toggle", "hiddenH", 1, 3)
+    ElementsObjects(Left,"transform","translateX(180px)", 1,3)
+    ElementsObjects(Front,"classList.toggle", "hiddenH", 1, 3)
     buttonU_.disabled = true
   }
   else {
-    ElementsObjects(Rigth, "hiddenH", 1, 3)
-    ElementsObjects(Front, "hiddenH", 1, 3)
+    ElementsObjects(Rigth,"classList.toggle", "hiddenH", 1, 3)
+    ElementsObjects(Rigth,"transform","translateX(0px)", 1,3)
+    ElementsObjects(Front,"classList.toggle", "hiddenH", 1, 3)
     buttonU.disabled = false
   }
 }
@@ -213,12 +253,17 @@ buttonR.onclick = () => {
 }
 buttonR_.onclick = () => {
   if (!buttonR.disabled) {
-    ElementsObjects(Down, "hiddenV", 3, 3)
-    ElementsObjects(Down, "hiddenV", 6, 6)
-    ElementsObjects(Down, "hiddenV", 9, 9)
-    ElementsObjects(Front, "hiddenV", 3, 3)
-    ElementsObjects(Front, "hiddenV", 6, 6)
-    ElementsObjects(Front, "hiddenV", 9)
+    ElementsObjects(Down,"classList.toggle", "hiddenV", 3, 3)
+    ElementsObjects(Down,"classList.toggle", "hiddenV", 6, 6)
+    ElementsObjects(Down,"classList.toggle", "hiddenV", 9)
+    ElementsObjects(Front,"classList.toggle", "hiddenV", 3, 3)
+    ElementsObjects(Front,"classList.toggle", "hiddenV", 6, 6)
+    ElementsObjects(Front,"classList.toggle", "hiddenV", 9)
+    ElementsObjects(Down,"transform", "translateY(-180px)", 3, 3)
+    ElementsObjects(Down,"transform", "translateY(-180px)", 6, 6)
+    ElementsObjects(Down,"transform", "translateY(-180px)", 9)
+    ElementsObjects(Front,"transform", "translateY(-60px)", 6, 6)
+    ElementsObjects(Front,"transform", "translateY(-120px)", 9)
     buttonR_.disabled = true
   }
   else {
@@ -231,3 +276,16 @@ buttonR_.onclick = () => {
     buttonR.disabled = false
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
