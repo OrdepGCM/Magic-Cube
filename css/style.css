@@ -1,66 +1,170 @@
 
 * {
-  margin: 0;
-  width: auto;
-  height: auto;
-  transition: 2000ms;
+  transition: all ease 4000ms;
 }
 body {
-  padding: 20px;
+  
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.cube {
-  width: auto;
-  height: auto;
-  display: flex;
+#cube {
+  transform-style: preserve-3d;
+  transform-origin: 90px 90px -90px;
+  transform: rotateX(-20deg) rotateY(-45deg);
+  margin: 90px;
+  width: 180px;
+  height: 180px;
 }
-.lines {
-  display: flex;
-  width: auto;
-  height: auto;
+#cube:hover {
+  transform: rotateX(-20deg) rotateY(405deg) ;
 }
-.up .squares {
-  background: #ccc;
+.pieces {
+  transform-style: preserve-3d;
+  margin: 0.2px;
+  position: absolute;
 }
-.left .squares {
-  background: #060;
-}
-.front .squares {
-  background: #800;
-}
-.rigth .squares {
-  background: #009;
-}
-.back .squares {
-  background: #BB6C21;
-}
-.down .squares {
-  background: #D3B018;
-}
-.squares {
+.sides {
   width: 50px;
   height: 50px;
   border: 5px solid #000;
   transition: all ease 2000ms;
+  position: absolute;
 }
-.hiddenH {
-  width: 0;
-  height: 50px;
-  border: 0 solid #000;
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
-  transition: all ease 2000ms;
+.upSide {
+  transform: translate3d(0, -30px, -30px) rotateX(90deg);
+  background: #ccc;
 }
-.hiddenV {
-  width: 50px;
-  height: 0;
-  border: 0 solid #000;
-  border-left: 5px solid #000;
-  border-right: 5px solid #000;
-  transition: all ease 2000ms;
+.leftSide {
+  transform: translate3d(-30px,0, -30px) rotateY(90deg);
+  background: #060;
+}
+.frontSide {
+  background: #900;
+}
+.rigthSide {
+  transform: translate3d(30px,0, -30px) rotateY(90deg);
+  background: #009;
+}
+.backSide {
+  transform: translateZ(-60px);
+  background: #DB8E17;
+}
+.downSide {
+  transform: translate3d(0, 30px, -30px) rotateX(90deg);
+  background: #E2D517;
+}
+.blackSide {
+  background: #000;
+}
+.piece1 {
+  transform: translate3d(120px,0,0);
+  transform-origin: -30px 90px -90px;
+}
+.piece2 {
+  transform: translate3d(60px,0,0);
+  transform-origin: 30px 90px -90px
+}
+.piece3 {
+  transform: translate(0);
+  transform-origin: 90px 90px -90px;
+}
+.piece4 {
+  transform: translate3d(120px, 0, -60px);
+  transform-origin: -30px 90px -30px;
+}
+.piece5 {
+  transform: translate3d(60px,0, -60px);
+  transform-origin: 30px 90px -30px;
+}
+.piece6 {
+  transform: translate3d(0,0,-60px);
+  transform-origin: 90px 90px -30px;
+}
+.piece7 {
+  transform: translate3d(120px,0, -120px);
+  transform-origin: -30px 90px 30px;
+}
+.piece8 {
+  transform: translate3d(60px,0, -120px);
+  transform-origin: 30px 90px 30px;
+}
+.piece9 {
+  transform: translate3d(0,0,-120px);
+  transform-origin: 90px 90px 30px;
+}
+.piece10 {
+  transform: translate3d(120px, 60px,0);
+  transform-origin: -30px 30px -90px;
+}
+.piece11 {
+  transform: translate3d(60px, 60px,0);
+  transform-origin: 30px 30px -90px;
+}
+.piece12 {
+  transform: translate3d(0,60px,0);
+  transform-origin: 90px 30px -90px;
+}
+.piece13 {
+  transform: translate3d(120px, 60px, -60px);
+  transform-origin: -30px 30px -30px;
+}
+.piece14 {
+  transform: translate3d(60px, 60px, -60px);
+  transform-origin: 30px 30px -30px;
+}
+.piece15 {
+  transform: translate3d(0, 60px, -60px);
+  transform-origin: 60px 30px -30px;
+}
+.piece16 {
+  transform: translate3d(120px,60px, -120px);
+  transform-origin: -30px 30px 30px;
+}
+.piece17 {
+  transform: translate3d(60px, 60px, -120px);
+  transform-origin: 30px 30px 30px;
+}
+.piece18 {
+  transform: translate3d(0,60px, -120px);
+  transform-origin: 60px 30px 30px;
+}
+.piece19 {
+  transform: translate3d(120px, 120px,0);
+  transform-origin: -30px -30px -90px;
+}
+.piece20 {
+  transform: translate3d(60px, 120px,0);
+  transform-origin: 30px -30px -90px;
+}
+.piece21 {
+  transform: translate3d(0,120px,0);
+  transform-origin: 90px -30px -90px;
+}
+.piece22 {
+  transform: translate3d(120px, 120px, -60px);
+  transform-origin: -30px -30px -30px;
+}
+.piece23 {
+  transform: translate3d(60px, 120px, -60px);
+  transform-origin: 30px -30px -30px;
+}
+.piece24 {
+  transform: translate3d(0, 120px, -60px);
+  transform-origin: 90px -30px -30px;
+}
+.piece25 {
+  transform: translate3d(120px, 120px, -120px);
+  transform-origin: -30px -30px 30px;
+}
+.piece26 {
+  transform: translate3d(60px, 120px, -120px);
+  transform-origin: 30px -30px 30px;
+}
+.piece27 {
+  transform: translate3d(0, 120px, -120px);
+  transform-origin: 90px -30px 30px;
 }
 .navigation td, button {
   width: 30px;
@@ -75,6 +179,12 @@ body {
 }/*
 .cube div:not(.cube div div) {
   transform: rotateX(45deg) rotateY(-45deg);
+}
+.pieces:not(.piece2,.piece3, .piece5, .piece6, .piece11, .piece12, .piece14, .piece15) {
+  transition: all ease 2000ms;
+}
+#cube:hover .pieces{
+  transform: translate3d(0,0,0);
 }*/
 
 
@@ -82,7 +192,3 @@ body {
 
 
 
-
-
-
-g
