@@ -1,6 +1,6 @@
 
 * {
-  transition: all ease 4000ms;
+  transition: transform ease 2000ms;
 }
 body {
   
@@ -128,7 +128,7 @@ body {
 }
 .piece18 {
   transform: translate3d(0,60px, -120px);
-  transform-origin: 60px 30px 30px;
+  transform-origin: 90px 30px 30px;
 }
 .piece19 {
   transform: translate3d(120px, 120px,0);
@@ -166,20 +166,20 @@ body {
   transform: translate3d(0, 120px, -120px);
   transform-origin: 90px -30px 30px;
 }
-.navigation td, button {
+.navigation td {
   width: 30px;
   height: 30px;
   margin: 0;
   padding: auto;
-  overflow: hidden;
+}
+.navigation td button {
+  float: left;
 }
 .navigation .miniCube {
   border: 2px solid #000;
   background: #ccc;
-}/*
-.cube div:not(.cube div div) {
-  transform: rotateX(45deg) rotateY(-45deg);
 }
+/*
 .pieces:not(.piece2,.piece3, .piece5, .piece6, .piece11, .piece12, .piece14, .piece15) {
   transition: all ease 2000ms;
 }
